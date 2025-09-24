@@ -43,7 +43,7 @@
     </head>
 
     <main>
-        <h1>Bienvenidos a la wed de la Tienda wed</h1>
+        <h1>Bienvenidos a la tienda web DK</h1>
         <p>Este es el contenido principal.</p>
     </main>
 
