@@ -1,119 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="Tienda DK" content="width-device-width, initial-scale-1.0">
-    <title>Mi Perfil - UTP</title>
-</head>
-
-<body>
-    <h1> Hola soy daniel </h1>
-    <img src="" alt="Mi foto">
-    <p class="descripcion"> Estudiante de la UTP, apasionado por la tecnologia .</p>
-
-    <h2> Mis hobbies:</h2>
-    <ul>
-        <li>Programar</li>
-        <li>Jugar videojuegos</li>
-        <li>Ver animes</li>
-        <li>Ver peliculas</li>
-    </ul>
-
-    <a href="https://github.com/Daniel-DK6/Proyecto-Taller-de-Programaci-n-Web.git">Mi GitHub</a>
-</body>
-
-</html>
-
 <html lang="es">
 <head>
-<meta charset="=UTF-8">
-<title>Tienda DK</title>
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda DK: Tu mejor opción para zapatillas modernas y de alta calidad.">
+    <title>Tienda DK | Venta de Zapatillas</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <head>
-        <img src="logo.png" alt="logo">
+    
+    <header>
+        <img src="URL_DEL_LOGO.png" alt="Logo de Tienda DK" class="logo"> 
+        
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">servicios</a>
-            <a href="contacto.html">contacto</a>
+            <a href="#inicio">INICIO</a>
+            <a href="#productos">ZAPATILLAS</a>
+            <a href="#perfil">MI PERFIL</a>
+            <a href="#contacto">CONTACTO</a>
         </nav>
-    </head>
+    </header>
 
     <main>
-        <h1>Bienvenidos a la tienda web DK</h1>
-        <p>Este es el contenido principal.</p>
+        
+        <section id="inicio" class="hero">
+            <h1>Bienvenidos a la Tienda DK</h1>
+            <h2>Encuentra el par perfecto para tu estilo.</h2>
+            <p>Explora nuestra colección de zapatillas, donde la tecnología y el diseño se unen.</p>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestras Zapatillas Destacadas</h2>
+            <div class="grid-productos">
+                <div class="producto-card">
+                    <img src="https://www.dexter.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-365-dabra-catalog/default/dwc772bd01/products/NIDH3158-003/NIDH3158-003-1.JPG?sw=600&sh=600" alt="Zapatilla Modelo X">
+                    <h3>Modelo Urbano Pro</h3>
+                    <p>Precio: S/ 250.00</p>
+                    <button>Ver Detalle</button>
+                </div>
+                
+                <div class="producto-card">
+                    <img src="https://bboys.pe/cdn/shop/products/81091390_0_1200x.jpg?v=1753377794" alt="Zapatilla Deportiva">
+                    <h3>Runner Max Speed</h3>
+                    <p>Precio: S/ 320.00</p>
+                    <button>Ver Detalle</button>
+                </div>
+                
+                </div>
+        </section>
+
+        <section id="multimedia">
+            <h2>Videos y Audios Promocionales</h2>
+            
+            <div class="media-content">
+                <video controls width="640" height="360" poster="URL_MINIATURA_VIDEO.jpg">
+                    <source src="https://www.tiktok.com/@wecam.company/video/7459824319431068933?is_from_webapp=1&sender_device=pc" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                
+                <audio controls>
+                    <source src="C:\Users\USUARIO\OneDrive\Desktop\AVJS\TAREAS DE LA U CICLO 5\videos para HTML\3e276c19.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
+
+        <section id="perfil" class="perfil-personal">
+            <h2>Hola, Soy Daniel - Creador de DK</h2>
+            <img src="URL_DE_TU_FOTO.jpg" alt="Mi foto" class="foto-perfil">
+            <p class="descripcion">Estudiante de la UTP, apasionado por la tecnología y el buen diseño de calzado.</p>
+            <h3>Mis intereses:</h3>
+            <ul>
+                <li>Programar</li>
+                <li>Jugar videojuegos</li>
+                <li>Ver animes</li>
+                <li>Ver películas</li>
+            </ul>
+            <a href="https://github.com/Daniel-DK6/Proyecto-Taller-de-Programaci-n-Web.git" target="_blank">Mi GitHub</a>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form action="/procesar-formulario" method="POST" class="formulario-tienda">
+                <input type="text" name="nombre" placeholder="Daniel Saavedra Canchanya" required>
+                <input type="email" name="email" placeholder="danielsaavedracanchanya@gmail.com" required>
+                <input type="tel" name="telefono" pattern="[0-9]{9}" placeholder="992576500">
+                <textarea name="mensaje" rows="5" placeholder="Tu mensaje aquí... (consulta, pedido, etc.)"></textarea>
+                
+                <select name="asunto">
+                    <option value="">Selecciona un asunto</option>
+                    <option value="consulta">Consulta sobre pedido</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="queja">Queja/Reclamo</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Suscribirse a ofertas
+                </label>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+        
     </main>
 
     <footer>
-        <p>&copy; 2025 Mi empresa </p> | <a href="privacidad.html">privacidad</a>
+        <p>&copy; 2025 Tienda DK | <a href="privacidad.html">Política de Privacidad</a></p>
     </footer>
+
 </body>
 </html>
-
-<form action="/procesar-formulario" method="POST">
-    
-    <input type="text" name="nombre" placeholder="Daniel" required>
-
-    <input type="email" name="email" placeholder="danielsaavedracanchanya@email.com" required>
-
-    <input type="tel" name="telefono" pattern="[0-9]{9}" placeholder="992576550">
-
-    <input type="password" name="contrasena" minlength="123456" required>
-
-    <textarea name="mensaje" rows="5" placeholder="Tu mensaje aqui..."></textarea>
-
-    <input type="date" name="=07/09/25">
-
-<select name="asunto">
-    <option value="">Selecciona un asunto</option>
-    <option value="consulta">Consulta</option>
-    <option value="sugerencia">Sugerencia</option>
-    <option value="queja">Queja</option>
-</select>
-
-<input type="checkbox" name="newsletter" id="newsletter">
-<label for="newsletter">Suscribirse al newsletter</label>
-
-<input type="radio" name="genero" value="masculino" id="masculino">
-<label for="masculino">Masculino</label>
-<input type="radio" name="genero" value="femenino" id="femenino">
-<label for="femenino">Femenino</label>
-
-<button type="submit">Enviar Mensaje</button>
-
-<img src="imagen.jpg" alt="Descripción de la imagen" width="300" height="200">
-
-<img src="imagen.jpg" alt="Descripción de la imagen" class="img-responsive">
-
-<picture>
-    <source media="(max-width: 768px)" srcset="imagen-small.jpg">
-    <source media="(max-width: 1200px)" srcset="imagen-medium.jpg">
-    <img src="imagen-large.jpg" alt="Descripción">
-</picture>
-
-<audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.ogg" type="audio/ogg">
-    Tu navegador no soporta el elemento de audio.
-</audio>
-
-<audio autoplay loop>
-    <source src="background-music.mp3" type="audio/mpeg">
-</audio>
-
-<video controls width="100%" poster="miniatura.jpg">
-    <source src="video.mp4" type="video/mp4">
-    <source src="video.webm" type="video/webm">
-    Tu navegador no soporta el elemento de video.
-</video>
-
-<video controls width="640" height="360">
-    <source src="video.mp4" type="video/mp4">
-    <source src="video.webm" type="video/webm">
-    <track kind="subtitles" src="subtitulos.vtt" srclang="es" label="Español">
-</video>
-
-</form>
