@@ -1,119 +1,203 @@
+/* Importamos una fuente moderna para tiendas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ESTILOS BASE */
 body {
-    font-family: Arial;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
-}
-
-h1{
-color:#003366;
-}
-
-.descripcion{
-background-color: white;
-padding: 15px;
-border-radius: 10px;
-}
-
-a {
-   color: #0066cc;
-   text-decoration: none;
-}
-
-a:hover {
-color: #ff6600;
-}
-
-
-body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f8f8f8; /* Fondo muy claro */
+    color: #333;
+    line-height: 1.6;
 }
 
+/* UTILIDAD */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ENCABEZADO (HEADER) */
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding: 15px 0;
+}
+
+header img.logo {
+    height: 50px; /* Tamaño del logo */
 }
 
 nav a {
-    color: #fff;
-    margin-left: 1rem;
     text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 2rem;
+nav a:hover {
+    color: #007bff; /* Color de acento (Azul moderno) */
 }
 
-footer {
-    background: #222;
-    color: #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-.form-container {
-    max-width: 600px;
+/* SECCIONES Y TÍTULOS */
+section {
+    padding: 40px 0;
     margin: 0 auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 1000px;
 }
 
-.form-group {
+h1 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007bff; /* Títulos de sección con color de marca */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SECCIÓN HERO (Banner de inicio) */
+.hero {
+    background-color: #e3f2fd; /* Fondo de banner suave */
+    text-align: center;
+    padding: 80px 0;
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+.hero h2 {
+    color: #555;
+    font-size: 1.5rem;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 10px;
+/* CUADRÍCULA DE PRODUCTOS */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 o 4 columnas en pantallas grandes */
+    gap: 30px;
+    padding: 20px;
+}
+
+.producto-card {
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+.producto-card:hover {
+    transform: translateY(-5px); /* Efecto flotante al pasar el mouse */
 }
 
-.btn-submit {
-    background: #4CAF50;
+.producto-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.producto-card button {
+    background-color: #333;
     color: white;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
-.btn-submit:hover {
-    background: #45a049;
+.producto-card button:hover {
+    background-color: #007bff;
 }
 
-.form-group input:invalid {
-    border-color: #f44336;
+/* FORMULARIO DE CONTACTO */
+.formulario-tienda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.form-group input:valid {
-    border-color: #4CAF50;
+.formulario-tienda input[type="text"],
+.formulario-tienda input[type="email"],
+.formulario-tienda input[type="tel"],
+.formulario-tienda textarea,
+.formulario-tienda select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formulario-tienda button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* SECCIÓN PERFIL PERSONAL */
+.perfil-personal {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.perfil-personal img.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.perfil-personal ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* PIE DE PÁGINA (FOOTER) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
 }
