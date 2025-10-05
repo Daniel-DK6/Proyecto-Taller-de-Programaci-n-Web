@@ -1,14 +1,23 @@
 /* Importamos una fuente moderna para tiendas */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* celulares */
+@media (max-width: 600px) {
+    .menu {display: none; }
+}
 /* ESTILOS BASE */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8; /* Fondo muy claro */
-    color: #333;
-    line-height: 1.6;
+  /* 1. Especifica la imagen de fondo */
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/908/794/desktop-wallpaper-elegant-elegance.jpg'); 
+  
+  /* 2. Controla la repetición */
+  background-repeat: no-repeat; /* Para que la imagen no se repita */
+  
+  /* 3. Asegura que la imagen cubra toda la pantalla */
+  background-size: cover; 
+  
+  /* 4. Fija la imagen para que no se desplace con el scroll */
+  background-attachment: fixed;
 }
 
 /* UTILIDAD */
@@ -20,8 +29,8 @@ body {
 
 /* ENCABEZADO (HEADER) */
 header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #4d555e;
+    box-shadow: 0 2px 5px rgba(44, 43, 43, 0.1);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -30,11 +39,12 @@ header {
 
 header img.logo {
     height: 50px; /* Tamaño del logo */
+    border-radius: 8px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #111010;
     font-size: 1rem;
     font-weight: 700;
     margin-left: 20px;
@@ -68,7 +78,7 @@ h2 {
 
 /* SECCIÓN HERO (Banner de inicio) */
 .hero {
-    background-color: #e3f2fd; /* Fondo de banner suave */
+    background-color: #969696; /* Fondo de banner tienda DK */
     text-align: center;
     padding: 80px 0;
     margin-bottom: 20px;
@@ -129,6 +139,15 @@ h2 {
 
 .producto-card button:hover {
     background-color: #007bff;
+}
+
+.media-content {
+  display: flex; /* Convierte el contenedor en un contenedor flex */
+  justify-content: center; /* Centra los ítems (el iframe) horizontalmente */
+  align-items: center; /* Centra los ítems verticalmente (si el contenedor tiene altura) */
+  /* Puedes añadir un margen superior/inferior si lo necesitas */
+  margin-top: 20px; 
+  margin-bottom: 20px;
 }
 
 /* FORMULARIO DE CONTACTO */
@@ -200,4 +219,4 @@ footer {
 footer a {
     color: #007bff;
     text-decoration: none;
-}
+}   
