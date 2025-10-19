@@ -1,33 +1,27 @@
-/* Importamos una fuente moderna para tiendas */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* celulares */
-@media (max-width: 600px) {
-    .menu {display: none; }
-}
-/* ESTILOS BASE */
-body {
-  /* 1. Especifica la imagen de fondo */
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/908/794/desktop-wallpaper-elegant-elegance.jpg'); 
-  
-  /* 2. Controla la repetición */
-  background-repeat: no-repeat; /* Para que la imagen no se repita */
-  
-  /* 3. Asegura que la imagen cubra toda la pantalla */
-  background-size: cover; 
-  
-  /* 4. Fija la imagen para que no se desplace con el scroll */
-  background-attachment: fixed;
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* UTILIDAD */
+body {
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/908/794/desktop-wallpaper-elegant-elegance.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+    line-height: 1.6;
+    color: #333;
+}
+
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* ENCABEZADO (HEADER) */
 header {
     background-color: #4d555e;
     box-shadow: 0 2px 5px rgba(44, 43, 43, 0.1);
@@ -38,7 +32,7 @@ header {
 }
 
 header img.logo {
-    height: 50px; /* Tamaño del logo */
+    height: 50px; 
     border-radius: 8px;
 }
 
@@ -52,12 +46,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bff; /* Color de acento (Azul moderno) */
+    color: #007bff; 
 }
 
-/* SECCIONES Y TÍTULOS */
 section {
-    padding: 40px 0;
+    padding: 40px 15px; 
     margin: 0 auto;
     max-width: 1000px;
 }
@@ -71,16 +64,15 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: #007bff; /* Títulos de sección con color de marca */
+    color: #007bff; 
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* SECCIÓN HERO (Banner de inicio) */
 .hero {
-    background-color: #969696; /* Fondo de banner tienda DK */
+    background-color: #969696; 
     text-align: center;
-    padding: 80px 0;
+    padding: 80px 15px;
     margin-bottom: 20px;
 }
 
@@ -89,10 +81,9 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* CUADRÍCULA DE PRODUCTOS */
 .grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 o 4 columnas en pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 30px;
     padding: 20px;
 }
@@ -108,7 +99,7 @@ h2 {
 }
 
 .producto-card:hover {
-    transform: translateY(-5px); /* Efecto flotante al pasar el mouse */
+    transform: translateY(-5px); 
 }
 
 .producto-card img {
@@ -142,15 +133,17 @@ h2 {
 }
 
 .media-content {
-  display: flex; /* Convierte el contenedor en un contenedor flex */
-  justify-content: center; /* Centra los ítems (el iframe) horizontalmente */
-  align-items: center; /* Centra los ítems verticalmente (si el contenedor tiene altura) */
-  /* Puedes añadir un margen superior/inferior si lo necesitas */
-  margin-top: 20px; 
-  margin-bottom: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px auto; 
 }
 
-/* FORMULARIO DE CONTACTO */
+.media-content iframe {
+    max-width: 100%;
+    height: auto; 
+}
+
 .formulario-tienda {
     display: flex;
     flex-direction: column;
@@ -159,9 +152,7 @@ h2 {
     margin: 0 auto;
 }
 
-.formulario-tienda input[type="text"],
-.formulario-tienda input[type="email"],
-.formulario-tienda input[type="tel"],
+.formulario-tienda input,
 .formulario-tienda textarea,
 .formulario-tienda select {
     padding: 12px;
@@ -181,11 +172,10 @@ h2 {
     cursor: pointer;
 }
 
-/* SECCIÓN PERFIL PERSONAL */
 .perfil-personal {
     text-align: center;
     background-color: #fff;
-    padding: 40px;
+    padding: 40px 15px;
     margin: 40px auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -205,18 +195,82 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap; 
 }
 
-/* PIE DE PÁGINA (FOOTER) */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 15px;
     font-size: 0.9rem;
 }
 
 footer a {
     color: #007bff;
     text-decoration: none;
-}   
+} 
+
+@media (max-width: 768px) {
+    
+    header {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column; 
+        text-align: center;
+        width: 100%; 
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 5px 0; 
+        font-size: 0.9rem;
+        padding: 8px 0;
+        background-color: rgba(255, 255, 255, 0.1); 
+        border-radius: 4px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .hero {
+        padding: 40px 15px;
+    }
+    
+    .grid-productos {
+        padding: 10px;
+        gap: 20px;
+    }
+}
+
+.video-responsive {
+    position: relative; 
+    overflow: hidden; 
+    padding-top: 56.25%; 
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+.video-responsive iframe {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.media-content {
+    display: flex; 
+    justify-content: center;
+}
